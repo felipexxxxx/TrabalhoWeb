@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="App.css">
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="criarConta.css">
+</head>
+
+<body>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form id="registerForm">
+          <h2>Formulário</h2>
+          <div class="inputbox">
+            <input type="text" id="nomeCompleto" name="nomeCompleto">
+            <label for="nomeCompleto">Nome completo</label>
+          </div>
+          <div class="inputbox">
+            <input type="email" id="registerEmail" name="email">
+            <label for="registerEmail">Email</label>
+          </div>
+          <div class="inputbox">
+            <input type="text" id="cpf" name="cpf">
+            <label for="cpf">CPF</label>
+          </div>
+          <div class="inputbox">
+            <input type="date" id="dataNascimento" name="dataNascimento">
+            <label for="dataNascimento">Data de Nascimento</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" id="registerPassword" name="password">
+            <label for="registerPassword">Senha</label>
+          </div>
+          <button type="submit" id="button-create-account">Criar conta</button>
+        </form>
+        <p id="registerResponse"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+      function trocarTela() {
+        window.location.href = "http://127.0.0.1:5500/login.html";
+      }
+  </script>
+
+  <script>
+    function formatarTelefone(input) {
+      let telefone = input.value;
+      telefone = telefone.replace(/\D/g, '');
+
+      if (telefone.length <= 10) {
+        telefone = telefone.replace(/^(\d{2})(\d)/g, '($1) $2');
+      } else {
+        telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+      }
+
+      input.value = telefone;
+    }
+  </script>
+  <script type = "module">
+    import { authService } from './js/api.js'
+    document.getElementById('registerForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const nome = document.getElementById('nomeCompleto').value;
+      const email = document.getElementById('registerEmail').value;
+      const senha = document.getElementById('registerPassword').value;
+      const dataNascimento = document.getElementById('dataNascimento').value;
+      const cpf = document.getElementById('cpf').value;
+      const role = 'CLIENTE';
+      const newUserDTO = {
+        nome: nome,
+        email: email,
+        senha: senha,
+        dataNascimento: dataNascimento,
+        cpf: cpf,
+        role: role
+      }
+      try{
+        const data = authService.register(newUserDTO);
+        trocarTela();
+      }
+      catch{
+        document.getElementById('registerResponse').textContent = 'Erro ao criar conta. Verifique seus dados.';
+        document.getElementById('registerResponse').style.color = 'red';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

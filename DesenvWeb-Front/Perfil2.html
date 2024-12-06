@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>BM Turismo - Meu Perfil</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Libraries Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Perfil2.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <img id="logo" src="img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html#about" class="nav-item nav-link">Sobre</a>
+                <a href="index.html#services" class="nav-item nav-link">Serviços</a>
+                <a href="index.html#passeios" class="nav-item nav-link">Passeios</a>
+                <a href="index.html#contact" class="nav-item nav-link">Contato</a>
+            </div>
+            <button id="logout-btn" class="btn btn-primary rounded-pill py-2 px-4">Sair</button>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white">Meu Perfil</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Profile Section Start -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Perfil do Usuário -->
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <img id="profile-picture" src="https://via.placeholder.com/150" alt="Foto do usuário" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h3 id="user-name" class="mb-3">Nome Completo</h3>
+                        <p class="mb-2"><strong>Email:</strong> <span id="user-email">usuario@email.com</span></p>
+                        <p class="mb-4"><strong>CPF:</strong> <span id="user-cpf">000.000.000-00</span></p>
+                        
+                        <input type="file" id="upload-profile-picture" accept="image/*" style="display: none;">
+                        <button id="change-profile-picture-btn" class="btn btn-primary rounded-pill px-4">
+                            <i class="fas fa-camera me-2"></i>Alterar Foto
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservas do Usuário -->
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white" style="color: #ffc107 !important; ">
+                        <h4 class="mb-0">Minhas Reservas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="reservas-container" class="reservas-list">
+                            <!-- Reservas serão inseridas aqui dinamicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Profile Section End -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/perfil.js" type="module"></script>
+    <script src="js/auth.nav.js" type="module"></script>
+
+    <script>
+        // Função para manipular o botão CANCELAR com confirmação
+        document.querySelectorAll('.btn.cancel').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const row = event.target.closest('tr');
+                const passeio = row.querySelector('td:nth-child(2)').textContent;
+                const confirmar = confirm(`Tem certeza que deseja cancelar o passeio "${passeio}"?`);
+                
+                if (confirmar) {
+                    row.remove();
+                    alert(`O passeio "${passeio}" foi cancelado com sucesso!`);
+                }
+            });
+        });
+
+        // Função para o botão SAIR
+  
+    </script>
+        
+    <script type="module">
+        import { authService } from './js/api.js'; 
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoutButton = document.getElementById('logout-btn');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    authService.logout(); 
+                });
+            }
+        });
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            const confirmLogout = confirm('Tem certeza que deseja sair?');
+            if (confirmLogout) {
+                window.location.href = "index.html";
+            }
+        });
+
+        document.getElementById('voltar-btn').addEventListener('click', () => {
+                window.location.href = "index.html";
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Carregar dados armazenados no localStorage
+            const storedPicture = localStorage.getItem('profilePicture');
+            const userName = localStorage.getItem('name');
+            const userEmail = localStorage.getItem('email');
+            const userCpf = localStorage.getItem('cpf');
+        
+            // Atualizar os campos da página
+            const profilePicture = document.getElementById('profile-picture');
+            if (storedPicture) {
+                profilePicture.src = storedPicture; // Atualiza com a imagem do localStorage
+            }
+            if (userName) document.getElementById('user-name').textContent = userName;
+            if (userEmail) document.getElementById('user-email').textContent = userEmail;
+            if (userCpf) document.getElementById('user-cpf').textContent = userCpf;
+        
+            // Gerenciar o botão de upload
+            const uploadInput = document.getElementById('upload-profile-picture');
+            const changeButton = document.getElementById('change-profile-picture-btn');
+        
+            changeButton.addEventListener('click', () => {
+                uploadInput.click(); // Abre o seletor de arquivos
+            });
+        
+            uploadInput.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+        
+                    reader.onload = (e) => {
+                        const imageData = e.target.result;
+                        // Atualiza a imagem no HTML
+                        profilePicture.src = imageData;
+                        // Armazena a imagem no localStorage
+                        localStorage.setItem('profilePicture', imageData);
+                    };
+        
+                    reader.readAsDataURL(file); // Lê o arquivo como Base64
+                } else {
+                    alert('Nenhuma imagem selecionada!');
+                }
+            });
+
+            if (userCpf) {
+            const formattedCpf = userCpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            document.getElementById('user-cpf').textContent = formattedCpf;
+}
+        });
+    </script>
+    
+    <script type="module">
+        import { reservaService } from './js/api.js';
+    
+        document.addEventListener('DOMContentLoaded', async () => {
+            const reservasContainer = document.getElementById('reservas-container');
+            try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    reservasContainer.innerHTML = '<p>Você precisa estar logado para ver suas reservas.</p>';
+                    return;
+                }
+                const tokenPayload = JSON.parse(atob(token.split('.')[1]));
+                const clienteId = tokenPayload.id;
+    
+                const reservas = await reservaService.listarReservasPorCliente(clienteId);
+    
+                if (!reservas || reservas.length === 0) {
+                    reservasContainer.innerHTML = '<p>Nenhuma reserva encontrada.</p>';
+                    return;
+                }
+    
+                reservasContainer.innerHTML = ''; // Limpa o contêiner
+                reservas.forEach((reserva) => {
+                    const reservaElement = document.createElement('div');
+                    reservaElement.classList.add('reserva-item');
+    
+                    // Conteúdo resumido inicial
+                    const resumoContent = `
+                        <div class="resumo-reserva">
+                            <p><strong>Nome do passeio:</strong> ${reserva.passeio.nome}</p>
+                            <p><strong>Data:</strong> ${reserva.data.substring(0, 10)}</p>
+                            <p><strong>Local:</strong> ${reserva.passeio.lugar}</p>
+                            <p><strong>Horário:</strong> ${reserva.passeio.hora}</p>
+                            <p><strong>Quantidade de pessoas:</strong> ${Math.round(reserva.valorTotal / reserva.passeio.valor)}</p>
+                            <p><strong>Status:</strong> ${reserva.status}</p>
+                        </div>
+                        
+                        <!-- Detalhes extras (inicialmente ocultos) -->
+                        <div class="detalhes-reserva" style="display: none;">
+                            <p><strong>Valor por pessoa:</strong> R$ ${reserva.passeio.valor}</p>
+                            <p><strong>Valor Total:</strong> R$ ${reserva.valorTotal}</p>
+                        </div>
+    
+                        <div class="botoes-reserva" style="margin-top: 10px;">
+                            <button class="btn btn-primary btn-ver-mais">Ver Mais</button>
+                            ${reserva.status !== 'CANCELADO' ? 
+                                `<button class="btn btn-danger btn-cancelar" data-reserva-id="${reserva.ID_reserva}">
+                                    Cancelar Reserva
+                                </button>` : ''
+                            }
+                        </div>
+                        <hr>
+                    `;
+    
+                    reservaElement.innerHTML = resumoContent;
+    
+                    // Adicionar listeners dos botões
+                    const verMaisBtn = reservaElement.querySelector('.btn-ver-mais');
+                    const detalhesDiv = reservaElement.querySelector('.detalhes-reserva');
+                    const cancelarBtn = reservaElement.querySelector('.btn-cancelar');
+    
+                    verMaisBtn.addEventListener('click', () => {
+                        const estaVisivel = detalhesDiv.style.display !== 'none';
+                        detalhesDiv.style.display = estaVisivel ? 'none' : 'block';
+                        verMaisBtn.textContent = estaVisivel ? 'Ver Mais' : 'Ver Menos';
+                    });
+    
+                    if (cancelarBtn) {
+                        cancelarBtn.addEventListener('click', async () => {
+                            if (confirm('Tem certeza que deseja cancelar esta reserva?')) {
+                                try {
+                                    await reservaService.cancelarReserva(reserva.ID_reserva);
+                                    alert('Reserva cancelada com sucesso!');
+                                    location.reload(); // Recarrega a página para atualizar a lista
+                                } catch (error) {
+                                    console.error('Erro ao cancelar reserva:', error);
+                                    alert('Erro ao cancelar reserva. Tente novamente.');
+                                }
+                            }
+                        });
+                    }
+    
+                    reservasContainer.appendChild(reservaElement);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar reservas:', error);
+                reservasContainer.innerHTML = '<p>Erro ao carregar reservas. Tente novamente mais tarde.</p>';
+            }
+        });
+    </script>
+
+
+
+    
+</body>
+</html>

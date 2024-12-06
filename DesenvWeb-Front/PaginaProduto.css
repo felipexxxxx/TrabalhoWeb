@@ -1,0 +1,306 @@
+:root {
+    --background: #f7fafc;
+    --foreground: #1a202c;
+    --primary: #3182ce;
+    --border: #e2e8f0;
+    --input: #edf2f7;
+    --ring: #63b3ed;
+    --primary-foreground: #ffffff;
+    --secondary: #f6ad55;
+    --secondary-foreground: #ffffff;
+    --accent: #68d391;
+    --accent-foreground: #ffffff;
+    --destructive: #f56565;
+    --destructive-foreground: #ffffff;
+    --muted: #718096;
+    --muted-foreground: #ffffff;
+    --card: #ffffff;
+    --card-foreground: #1a202c;
+    --popover: #edf2f7;
+    --popover-foreground: #1a202c;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  img {
+    border-radius: 0.5rem;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .grid {
+    display: grid;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  .shadow-lg {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .h-64 {
+    height: 16rem;
+  }
+  .h-32 {
+    height: 8rem;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  .rounded {
+    border-radius: 0.375rem;
+  }
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  .block {
+    display: block;
+  }
+  .border {
+    border-width: 1px;
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .p-2 {
+    padding: 0.5rem;
+  }
+  .p-4 {
+    padding: 1rem;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .text-secondary-foreground {
+    color: var(--secondary-foreground);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .text-primary-foreground {
+    color: var(--primary-foreground);
+  }
+  .bg-muted {
+    background-color: var(--muted);
+  }
+  .text-muted-foreground {
+    color: var(--muted-foreground);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-accent-foreground {
+    color: var(--accent-foreground);
+  }
+  .bg-destructive {
+    background-color: var(--destructive);
+  }
+  .text-destructive-foreground {
+    color: var(--destructive-foreground);
+  }
+  .hover\:bg-secondary\/80:hover {
+    background-color: rgba(246, 173, 85, 0.8);
+  }
+  #checkin,
+  #checkout,
+  #guests {
+    width: 100%;
+  }
+  #changeDatesBtn {
+    cursor: pointer;
+  }
+  #changeDatesBtn:hover {
+    background-color: #276749;
+  }
+  .container {
+    padding-top: 115px; /* Ajuste o valor de acordo com a altura da navbar */
+  }
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Para garantir que a navbar fique acima de outros elementos */
+  }
+
+  .btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn.btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn.btn-outline-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 0;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.hero-header {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url('/img/Cumbuco2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.feature-img {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+
+.price-item {
+    transition: .5s;
+}
+
+.price-item:hover {
+    margin-top: -10px;
+}
+
+footer {
+    background: var(--dark);
+    color: #FFFFFF;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+  @media (max-width: 768px) {
+    #conteudo {
+      padding-top: 60px; /* Altura ajustada para telas menores */
+    }
+  }

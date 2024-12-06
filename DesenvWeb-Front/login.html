@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="App.css">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form id="loginForm">
+          <h2>Formulário</h2>
+          <div class="inputbox">
+            <input type="text" id="loginEmail" name="username">
+            <label for="loginEmail">Email</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" id="loginPassword" name="senha">
+            <label for="loginPassword">Senha</label>
+          </div>
+
+          <button type="submit" id="button-entrance">Entrar</button>
+          <button type="button" onclick="trocarTela()" id="button-create-account">Criar conta</button>
+        </form>
+        <p id="loginResponse"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function trocarTelaHome() {
+        
+      window.location.href = "http://127.0.0.1:5500/index.html";
+    }
+    function trocarTela() {
+      window.location.href = "http://127.0.0.1:5500/criarConta.html";
+    }
+  </script>
+  <script type="module">
+    import { authService } from './js/api.js';
+    document.getElementById('loginForm').addEventListener('submit',async (event) => {
+      event.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const senha = document.getElementById('loginPassword').value;
+      const loginDTO = { 
+        email:email,
+        senha: senha 
+      };
+
+      try{
+        const data = await authService.login(loginDTO);
+        if(data.token){
+          trocarTelaHome(); 
+        }
+      }
+      catch{
+        document.getElementById('loginResponse').textContent = 'Erro ao fazer login. Verifique suas credenciais.';
+        document.getElementById('loginResponse').style.color = 'red';
+        
+        submitButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

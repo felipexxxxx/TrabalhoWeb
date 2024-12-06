@@ -1,0 +1,39 @@
+/* Estilos adicionais para a página de Administração */
+#reservas {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#criar-passeio {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#tour-preview {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004a99;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 0.5rem;
+}

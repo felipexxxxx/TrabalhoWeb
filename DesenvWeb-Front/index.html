@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tourist - Travel Agency HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="/index.html" class="navbar-brand p-0">
+                <img id="logo" src="img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">Sobre</a>
+                    <a href="#services" class="nav-item nav-link">Serviços</a>
+                    <a href="#passeios" class="nav-item nav-link">Passeios</a>
+                    <a href="#contact" class="nav-item nav-link">Contato</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinos</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/PaginaProduto.html" class="dropdown-item">Cumbuco</a>
+                            <a href="#booking" class="dropdown-item">Jericoacoara</a>
+                            <a href="#team" class="dropdown-item">Praia do Futuro</a>
+                            <a href="#testimonial" class="dropdown-item">Morro Branco</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="Login.html" class="btn btn-primary rounded-pill py-2 px-4" id="register-button">Registrar</a>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 id="home" class="display-3 text-white mb-3 animated slideInDown">Aproveite suas férias no melhor site de passeios do Ceará
+                        </h1>
+                        <p class="fs-4 text-white mb-4 animated slideInDown">Passeios disponíveis em todo estado por um preço imperdível</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/felipePraia.jpg" alt=""
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 id="about" class="section-title bg-white text-start text-primary pe-3">Sobre nós</h6>
+                    <h1 class="mb-4">Bem-vindo ao <span class="text-primary">BM Turismo</span></h1>
+                    <p class="mb-4">Na BM Turismo, somos especializados em proporcionar experiências inesquecíveis nas mais belas praias do litoral cearense. Com foco em oferecer passeios de qualidade, garantimos que cada momento da sua viagem seja seguro, confortável e cheio de descobertas. Nossa missão é levar você às praias mais paradisíacas do Ceará, sempre com um serviço que preza pelo bem-estar e satisfação dos nossos clientes.</p>
+                    <h3 class="mb-4">Por que somos os melhores?</h3>
+                    <p class="mb-4">Na BM Turismo, oferecemos uma experiência completa para explorar o litoral do Ceará. Com transporte incluso em todos os passeios, você viaja com conforto e tranquilidade, enquanto nossos guias especializados compartilham histórias e curiosidades sobre cada praia. Atuamos nas principais praias do estado, sempre priorizando a segurança e qualidade. Além disso, nossos pacotes promocionais garantem descontos especiais para quem deseja conhecer várias praias, tornando sua viagem ainda mais vantajosa.
+                    </p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Transporte incluso</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Passeios 5 estrelas</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Guias especializados</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Promoções
+                            </p>
+                        </div>
+                        <!-- <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i></p>
+                        </div> -->
+                    </div>
+                    <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Ler mais</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Serviços</h6>
+                <h1 id="services" class="mb-5">Nossos serviços</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5>Passeios de buggy</h5>
+                            <p>Permitem ao cliente ajustar datas, horários e roteiros, garantindo uma experiência personalizada e flexível.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                            <h5>Experiência Segurança</h5>
+                            <p>Oferecemos suporte completo para garantir a segurança e a qualidade de cada passeio. Desde a manutenção dos buggies até o treinamento dos guias, nosso compromisso é proporcionar uma experiência segura e confortável para nossos clientes, com equipamentos de alta qualidade e protocolos rigorosos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                            <h5>Guias de viagem</h5>
+                            <p>Permitem ao cliente personalizar passeios, ajustando destinos e roteiros conforme suas preferências. Isso oferece mais controle e flexibilidade, tornando a experiência mais adaptada e agradável.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
+                            <h5>Gerenciamento de eventos</h5>
+                            <p>Permite ao cliente ajustar passeios, alterando datas, horários ou cancelando. Isso dá mais controle e facilita o planejamento conforme as necessidades.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Destination Start -->
+    <div class="container-xxl py-5 destination">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Destinos</h6>
+                <h1 id="destination" class="mb-5">Passeios mais populares</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="/cumbuco.html">
+                                <img class="img-fluid" src="img/praia-cumbuco.webp" alt="">
+                                <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                                    30% OFF</div> -->
+                                <div id="names"
+                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                                    Cumbuco</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/praia-de-canoa-quebrada.jpg" alt="">
+                                <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                                    25% OFF</div> -->
+                                <div id="names"
+                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                                    Canoa Quebrada</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img id="praia-futuro" class="img-fluid" src="img/praia-do-futuro (1).jpg" alt="">
+                                <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">
+                                    35% OFF</div> -->
+                                <div id="names"
+                                    class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                                    Praia do Futuro</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/jericoacoara.jpg" alt=""
+                            style="object-fit: cover;">
+                        <!-- <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF
+                        </div> -->
+                        <div id="names"
+                            class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">
+                            Jericoacoara</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Destination Start -->
+
+
+    <!-- Package Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Passeios</h6>
+                <h1 id="passeios"class="mb-5">Nossos Passeios</h1>
+            </div>
+            <!-- Container onde os passeios serão carregados -->
+            <div id="passeios-container" class="row g-4 justify-content-center">
+                <!-- Os passeios serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+    <!-- Package End -->
+
+    <!-- Process Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Processo</h6>
+                <h1 class="mb-5">3 etapas fáceis</h1>
+            </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-globe fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Escolha um destino</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Escolha seu destino em nosso site de passeios! Explore uma variedade de locais, descubra atrações e atividades disponíveis, e encontre a experiência perfeita para sua viagem.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-dollar-sign fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Pague on-line</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">
+                            Pague on-line em nosso site de passeios! Realize pagamentos de forma rápida e segura, facilitando a reserva e garantindo a confirmação imediata para sua viagem.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                            style="width: 100px; height: 100px;">
+                            <i class="fa fa-plane fa-3x text-white"></i>
+                        </div>
+                        <h5 class="mt-4">Voe hoje</h5>
+                        <hr class="w-25 mx-auto bg-primary mb-1">
+                        <hr class="w-50 mx-auto bg-primary mt-0">
+                        <p class="mb-0">Voe hoje e reserve voos de última hora para seus passeios! Garanta uma viagem rápida e conveniente, aproveitando cada momento da sua aventura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Process Start -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 id="team" class="section-title bg-white text-center text-primary px-3">Guias de viagem</h6>
+                <h1 class="mb-5">Conheça nossos guias</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/imagem leo.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Leonardo de Saboia</h5>
+                            <small>Guia</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/imagem felipe.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Felipe de Paula</h5>
+                            <small>Guia</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/imagem kaike.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Kaike Pétalas</h5>
+                            <small>Guia</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Companhia</h4>
+                    <a class="btn btn-link" href="">Sobre Nós</a>
+                    <a id="contact" class="btn btn-link" href="">Contate-nos</a>
+                    <!--<a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>-->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contato</h4>
+                    <p class="mb-2"><i class="fa fa-moap-marker-alt me-3"></i>Fortaleza, CE</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+55 85 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Felipao@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Galeria</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/praia-cumbuco.webp" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/Cumbuco.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/jericoacoara.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/praia-de-canoa-quebrada.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/Cumbuco3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/praia-do-futuro (1).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script src="js/main.js"></script>
+   <script src="js/auth.nav.js" type="module"></script>
+   <script src="js/passeios.js"></script>
+
+   
+
+
+
+
+</body>
+
+</html>
